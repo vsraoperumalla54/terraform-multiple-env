@@ -1,9 +1,14 @@
+
 variable "project"{
     default = "roboshop"
 }
 
 variable "environment" {
-    type = string
+    type = map
+    default = {
+        dev = "dev"
+        prod = "prod"
+    }
 }
 
 variable "ami_id" {
@@ -12,7 +17,11 @@ variable "ami_id" {
 }
 
 variable "instance_type" {
-    type = string
+    type = map
+    default = {
+        dev = "t3.micro"
+        prod = "t3.small"
+    }
 }
 
 

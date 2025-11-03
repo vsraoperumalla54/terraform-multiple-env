@@ -5,13 +5,14 @@ terraform {
       version = "6.16.0"
     }
   }
-    backend "s3" {
+
+  backend "s3" {
     bucket = "terraform-86-daws"
-    key    = "provisioners-demo"
+    key    = "workspace-demo"
     region = "us-east-1"
     use_lockfile = true
     encrypt = true
-    }
+  }
 }
 
 provider "aws" {
